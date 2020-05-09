@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .img {
+        padding: 10px;
+        width: 120px;
+        height: 120px;
+      }
+      #div1 {
+        background-color: black;
+        flex: 5;
+        margin-top: 100px;
+        margin-left: 20px;
+        padding-top: 40px;
+        padding-left: 5px;
+        float: left;
+        width: 650px;
+        height: 1150px;
+        border: 1px solid black;
+        box-shadow: 5px 10px 18px black;
+        overflow: scroll;
+      }
+      #div2 {
+        background-image: url(wood.jpg);
+        padding: 30px;
+        margin-top: 100px;
+        flex: 2.6;
+        float: left;
+        margin-right: 0px;
+        margin-left: 30px;
+        width: 500px;
+        height: 600px;
+        border: 1px solid black;
+        box-shadow: 5px 10px 18px black;
+        overflow-x: hidden;
+        overflow-y: scroll;
+      }
+      #div3 {
+        display: flex;
+        flex-direction: row;
+      }
+      #demo {
+        flex: 1;
+        width: 300px;
+        height: 30px;
+        border: 1px solid black;
+      }
+      #div4 {
+        flex: 1;
+        width: 200px;
+        height: 30px;
+        border: 1px solid black;
+      }
+      .button {
+        flex: 0.4;
+        width: 50px;
+        height: 30px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body onload="startgame()">
+    <div id="div3">
+      <div id="div4"></div>
+      <button class="button" onclick="Submit()">SUBMIT</button>
+      <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img
+          src="1.png"
+          draggable="true"
+          ondragstart="drag(event)"
+          id="BOOKSHELVE"
+          class="img"
+        />
+        <img
+          src="2.png"
+          draggable="true"
+          ondragstart="drag(event)"
+          id="SOFT-TOYS"
+          class="img"
+        />
+        <img
+          src="3.jpg"
+          draggable="true"
+          ondragstart="drag(event)"
+          id="GARDEN"
+          class="img"
+        />
+        <img
+          src="5.jpg"
+          draggable="true"
+          ondragstart="drag(event)"
+          id="COMMODE"
+          class="img"
+        />
+        <img
+          src="6.jpg"
+          draggable="true"
+          ondragstart="drag(event)"
+          id="WATER-JAR"
+          class="img"
+        />
+        <img
+          src="9.jpg"
+          draggable="true"
+          ondragstart="drag(event)"
+          id="WATER-BASIN"
+          class="img"
+        />
+        <img
+          src="10.jpg"
+          draggable="true"
+          ondragstart="drag(event)"
+          id="NOTEBOOK"
+          class="img"
+        />
+        <img
+          src="7.jpg"
+          draggable="true"
+          ondragstart="drag(event)"
+          id="COATING-TOOLS"
+          class="img"
+        />
+        <img
+          src="17.jpg"
+          draggable="true"
+          ondragstart="drag(event)"
+          id="PLANT-POTS"
+          class="img"
+        />
+        <img
+          src="18.jpg"
+          draggable="true"
+          ondragstart="drag(event)"
+          id="SWING"
+          class="img"
+        />
+        <img
+          src="19.jpg"
+          draggable="true"
+          ondragstart="drag(event)"
+          id="POUCH"
+          class="img"
+        />
+        <img
+          src="20.jpg"
+          draggable="true"
+          ondragstart="drag(event)"
+          id="SHAMPOO-HOLDER"
+          class="img"
+        />
+        <img
+          src="23.png"
+          draggable="true"
+          ondragstart="drag(event)"
+          id="WATER-BOILER"
+          class="img"
+        />
+        <img
+          src="25.jpg"
+          draggable="true"
+          ondragstart="drag(event)"
+          id="SHOWER"
+          class="img"
+        />
+        <img
+          src="28.jpg"
+          draggable="true"
+          ondragstart="drag(event)"
+          id="TRI-CYCLE"
+          class="img"
+        />
+        <img
+          src="29.jpg"
+          draggable="true"
+          ondragstart="drag(event)"
+          id="WATER-TANK"
+          class="img"
+        />
+        <img
+          src="27.png"
+          draggable="true"
+          ondragstart="drag(event)"
+          id="GRASS-CUTTER"
+          class="img"
+        />
+        <img
+          src="26.jpg"
+          draggable="true"
+          ondragstart="drag(event)"
+          id="STUDY-TABLE"
+          class="img"
+        />
+        <img
+          src="24.jpg"
+          draggable="true"
+          ondragstart="drag(event)"
+          id="TABLE-LAMP"
+          class="img"
+        />
+        <img
+          src="22.jpg"
+          draggable="true"
+          ondragstart="drag(event)"
+          id="SCHEMATIC-PLAY"
+          class="img"
+        />
+        <img
+          src="21.jpg"
+          draggable="true"
+          ondragstart="drag(event)"
+          id="TOILET-PAPER"
+          class="img"
+        />
+        <img
+          src="16.jpg"
+          draggable="true"
+          ondragstart="drag(event)"
+          id="SEESAW"
+          class="img"
+        />
+        <img
+          src="15.jpg"
+          draggable="true"
+          ondragstart="drag(event)"
+          id="KIDS-CAR"
+          class="img"
+        />
+        <img
+          src="14.jpg"
+          draggable="true"
+          ondragstart="drag(event)"
+          id="BATHROOM"
+          class="img"
+        />
+        <img
+          src="12.png"
+          draggable="true"
+          ondragstart="drag(event)"
+          id="COOKING-SET"
+          class="img"
+        />
+        <img
+          src="7.jpg"
+          draggable="true"
+          ondragstart="drag(event)"
+          id="CUTLERY-SET"
+          class="img"
+        />
+        <img
+          src="11.jpg"
+          draggable="true"
+          ondragstart="drag(event)"
+          id="9SET OF KITCHEN TOOLS"
+          class="img"
+        />
+        <img
+          src="13.jpg"
+          alt="bushes"
+          draggable="true"
+          ondragstart="drag(event)"
+          id="bushes"
+          class="img"
+        />
+        <img
+          src="4.jpg"
+          draggable="true"
+          ondragstart="drag(event)"
+          id="GARDENING-TOOLS"
+          class="img"
+        />
+      </div>
+
+      <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <div id="demo"></div>
+    </div>
+
+    <script>
+      function allowDrop(ev) {
+        ev.preventDefault();
+      }
+
+      function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+      }
+
+      function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+        var x = data;
+        document.getElementById("demo").innerHTML = x;
+      }
+
+      var s = ["PLAYSCHOOL", "KITCHEN", "BATHROOM", "STUDYROOM", "GARDEN"];
+      function startgame() {
+        document.getElementById("div4").innerHTML = s[0];
+      }
+
+      function Submit() {
+        var a = document.getElementById("div2");
+        var b = [];
+        var c = a.getElementsByClassName("img");
+        for (i = 0; i < c.length; i++) {
+          var d = c[i].getAttribute("id");
+          b.push(d);
+        }
+        for (x = 0; x < 6; x++) {
+          if (
+            b[x] == "SWING" ||
+            b[x] == "SOFT-TOYS" ||
+            b[x] == "TRI-CYCLE" ||
+            b[x] == "KIDS-CAR" ||
+            b[x] == "SCHEMATIC-PLAY" ||
+            b[x] == "SEESAW"
+          ) {
+          } else {
+            window.alert("YOU HAVE LOST");
+            return;
+          }
+        }
+        window.alert("YOU HAVE WON");
+        document.getElementById("div4").innerHTML = s[1];
+        b.length = 0;
+        console.log(b);
+      }
+    </script>
+  </body>
+</html>
