@@ -297,23 +297,34 @@
         var data = ev.dataTransfer.getData("text");
 
         // Gets all the children elements of "div2"
-        var children = document.getElementById("div2").childNodes;
+        var childrenA = document.getElementById("div2").childNodes;
+
+        var childrenB = document.getElementById("div1").childNodes;
 
         // creates a boolean variable to be used later
-        let isChildTarget = false;
+        let isChildTargetA = false;
+        let isChildTargetB = false;
 
         // Iterates all the child elements of div2 to check if the image was dropped on any of the child elements
-        for (let i = 0; i < children.length; i++) {
-          if (ev.target.isSameNode(children[i])) {
+        for (let i = 0; i < childrenA.length; i++) {
+          if (ev.target.isSameNode(childrenA[i])) {
             // if it is found that the image was dropped on any of the child elements, then the boolean variable is made true.
-            isChildTarget = true;
+            isChildTargetA = true;
+          }
+        }
+
+        // Iterates all the child elements of div2 to check if the image was dropped on any of the child elements
+        for (let i = 0; i < childrenB.length; i++) {
+          if (ev.target.isSameNode(childrenB[i])) {
+            // if it is found that the image was dropped on any of the child elements, then the boolean variable is made true.
+            isChildTargetB = true;
           }
         }
 
         // drop is performed only if the image is dropped on "div2" or on any of its children
         if (
           ev.target.isSameNode(document.getElementById("div2")) ||
-          isChildTarget
+          isChildTargetA
         ) {
           // the drop target should always be div2. That way, when the image is dropped, it gets dropped on "div2" only.
           document
@@ -321,6 +332,16 @@
             .appendChild(document.getElementById(data));
           var x = data;
           document.getElementById("demo").innerHTML = x;
+        }
+
+        if (
+          ev.target.isSameNode(document.getElementById("div1")) ||
+          isChildTargetB
+        ) {
+          // the drop target should always be div2. That way, when the image is dropped, it gets dropped on "div2" only.
+          document
+            .getElementById("div1")
+            .appendChild(document.getElementById(data));
         }
       }
 
