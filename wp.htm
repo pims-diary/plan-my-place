@@ -64,218 +64,51 @@
     <div id="div3">
       <div id="div4"></div>
       <button class="button" onclick="Submit()">SUBMIT</button>
-      <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-        <img
-          src="1.png"
-          draggable="true"
-          ondragstart="drag(event)"
-          id="BOOKSHELVE"
-          class="img"
-        />
-        <img
-          src="2.png"
-          draggable="true"
-          ondragstart="drag(event)"
-          id="SOFT-TOYS"
-          class="img"
-        />
-        <img
-          src="3.jpg"
-          draggable="true"
-          ondragstart="drag(event)"
-          id="GARDEN"
-          class="img"
-        />
-        <img
-          src="5.jpg"
-          draggable="true"
-          ondragstart="drag(event)"
-          id="COMMODE"
-          class="img"
-        />
-        <img
-          src="6.jpg"
-          draggable="true"
-          ondragstart="drag(event)"
-          id="WATER-JAR"
-          class="img"
-        />
-        <img
-          src="9.jpg"
-          draggable="true"
-          ondragstart="drag(event)"
-          id="WATER-BASIN"
-          class="img"
-        />
-        <img
-          src="10.jpg"
-          draggable="true"
-          ondragstart="drag(event)"
-          id="NOTEBOOK"
-          class="img"
-        />
-        <img
-          src="7.jpg"
-          draggable="true"
-          ondragstart="drag(event)"
-          id="COATING-TOOLS"
-          class="img"
-        />
-        <img
-          src="17.jpg"
-          draggable="true"
-          ondragstart="drag(event)"
-          id="PLANT-POTS"
-          class="img"
-        />
-        <img
-          src="18.jpg"
-          draggable="true"
-          ondragstart="drag(event)"
-          id="SWING"
-          class="img"
-        />
-        <img
-          src="19.jpg"
-          draggable="true"
-          ondragstart="drag(event)"
-          id="POUCH"
-          class="img"
-        />
-        <img
-          src="20.jpg"
-          draggable="true"
-          ondragstart="drag(event)"
-          id="SHAMPOO-HOLDER"
-          class="img"
-        />
-        <img
-          src="23.png"
-          draggable="true"
-          ondragstart="drag(event)"
-          id="WATER-BOILER"
-          class="img"
-        />
-        <img
-          src="25.jpg"
-          draggable="true"
-          ondragstart="drag(event)"
-          id="SHOWER"
-          class="img"
-        />
-        <img
-          src="28.jpg"
-          draggable="true"
-          ondragstart="drag(event)"
-          id="TRI-CYCLE"
-          class="img"
-        />
-        <img
-          src="29.jpg"
-          draggable="true"
-          ondragstart="drag(event)"
-          id="WATER-TANK"
-          class="img"
-        />
-        <img
-          src="27.png"
-          draggable="true"
-          ondragstart="drag(event)"
-          id="GRASS-CUTTER"
-          class="img"
-        />
-        <img
-          src="26.jpg"
-          draggable="true"
-          ondragstart="drag(event)"
-          id="STUDY-TABLE"
-          class="img"
-        />
-        <img
-          src="24.jpg"
-          draggable="true"
-          ondragstart="drag(event)"
-          id="TABLE-LAMP"
-          class="img"
-        />
-        <img
-          src="22.jpg"
-          draggable="true"
-          ondragstart="drag(event)"
-          id="SCHEMATIC-PLAY"
-          class="img"
-        />
-        <img
-          src="21.jpg"
-          draggable="true"
-          ondragstart="drag(event)"
-          id="TOILET-PAPER"
-          class="img"
-        />
-        <img
-          src="16.jpg"
-          draggable="true"
-          ondragstart="drag(event)"
-          id="SEESAW"
-          class="img"
-        />
-        <img
-          src="15.jpg"
-          draggable="true"
-          ondragstart="drag(event)"
-          id="KIDS-CAR"
-          class="img"
-        />
-        <img
-          src="14.jpg"
-          draggable="true"
-          ondragstart="drag(event)"
-          id="BATHROOM"
-          class="img"
-        />
-        <img
-          src="12.png"
-          draggable="true"
-          ondragstart="drag(event)"
-          id="COOKING-SET"
-          class="img"
-        />
-        <img
-          src="7.jpg"
-          draggable="true"
-          ondragstart="drag(event)"
-          id="CUTLERY-SET"
-          class="img"
-        />
-        <img
-          src="11.jpg"
-          draggable="true"
-          ondragstart="drag(event)"
-          id="9SET OF KITCHEN TOOLS"
-          class="img"
-        />
-        <img
-          src="13.jpg"
-          alt="bushes"
-          draggable="true"
-          ondragstart="drag(event)"
-          id="bushes"
-          class="img"
-        />
-        <img
-          src="4.jpg"
-          draggable="true"
-          ondragstart="drag(event)"
-          id="GARDENING-TOOLS"
-          class="img"
-        />
-      </div>
-
+      <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
       <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
       <div id="demo"></div>
     </div>
 
     <script>
+      var images = [
+        ["book-shelve.png", "BOOK-SHELVE"],
+        ["bushes.jpg", "BUSHES"],
+        ["commode.jpg", "COMMODE"],
+        ["cutlery-set.jpg", "CUTLERY-SET"],
+        ["fries.jpg", "FRIES"],
+        ["garden.jpg", "GARDEN"],
+        ["gardening-tools.jpg", "GARDENING-TOOLS"],
+        ["grass-cutter.png", "GRASS-CUTTER"],
+        ["kids-car.jpg", "KIDS-CAR"],
+        ["note-books.jpg", "NOTE-BOOKS"],
+        ["pots.jpg", "POTS"],
+        ["pouch.jpg", "POUCH"],
+        ["schematic-play.jpg", "SCHEMATIC-PLAY"],
+        ["seesaw.jpg", "SEESAW"],
+        ["shampoo-holder.jpg", "SHAMPOO-HOLDER"],
+        ["study-table.jpg", "STUDY-TABLE"],
+        ["soft-toys.png", "SOFT-TOYS"],
+        ["swing.jpg", "SWING"],
+        ["table-lamp.jpg", "TABLE-LAMP"],
+        ["tissue-paper.jpg", "TISSUE-PAPER"],
+        ["tri-cycle.jpg", "TRI-CYCLE"],
+        ["water-jar.jpg", "WATER-JAR"],
+        ["water-tank.jpg", "WATER-TANK"],
+        ["9-kitchen-tools.jpg", "9-KITCHEN-TOOLS"],
+        ["7-kitchen-tools.png", "7-KITCHEN-TOOLS"],
+      ];
+
+      for (var i = 0; i < images.length; i++) {
+        document.getElementById("div1").innerHTML +=
+          "<img src=" +
+          images[i][0] +
+          ` draggable="true"
+          ondragstart="drag(event)"` +
+          " id=" +
+          images[i][1] +
+          ' class="img"/>';
+      }
+
       function allowDrop(ev) {
         ev.preventDefault();
       }
