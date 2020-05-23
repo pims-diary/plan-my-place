@@ -96,6 +96,10 @@
         ["water-tank.jpg", "WATER-TANK"],
         ["9-kitchen-tools.jpg", "9-KITCHEN-TOOLS"],
         ["7-kitchen-tools.png", "7-KITCHEN-TOOLS"],
+        ["water-boiler.png", "BOILER"],
+        ["shawer.jpg", "SHAWER"],
+        ["bathroom.jpg", "BATH-TUB"],
+        ["basin.jpg", "BASIN"],
       ];
 
       for (var i = 0; i < images.length; i++) {
@@ -190,25 +194,117 @@
         for (i = 0; i < c.length; i++) {
           var d = c[i].getAttribute("id");
           b.push(d);
+          var div = document.getElementById("div4").innerHTML;
         }
-        for (x = 0; x < 6; x++) {
-          if (
-            b[x] == "SWING" ||
-            b[x] == "SOFT-TOYS" ||
-            b[x] == "TRI-CYCLE" ||
-            b[x] == "KIDS-CAR" ||
-            b[x] == "SCHEMATIC-PLAY" ||
-            b[x] == "SEESAW"
-          ) {
-          } else {
-            window.alert("YOU HAVE LOST");
-            return;
+        if (div == "PLAYSCHOOL") {
+          for (x = 0; x < 6; x++) {
+            if (
+              b[x] == "SWING" ||
+              b[x] == "SOFT-TOYS" ||
+              b[x] == "TRI-CYCLE" ||
+              b[x] == "KIDS-CAR" ||
+              b[x] == "SCHEMATIC-PLAY" ||
+              b[x] == "SEESAW"
+            ) {
+            } else {
+              window.alert("YOU HAVE LOST");
+              return;
+            }
           }
+          window.alert("YOU HAVE WON");
+          document.getElementById("demo").innerHTML = "";
+          document.getElementById("div4").innerHTML = s[1];
         }
-        window.alert("YOU HAVE WON");
-        document.getElementById("div4").innerHTML = s[1];
-        b.length = 0;
-        console.log(b);
+
+        var clear = document.getElementById("div2");
+        clear.innerHTML = "";
+        var clear1 = document.getElementById("div1");
+        clear1.innerHTML = "";
+        for (var i = 0; i < images.length; i++) {
+          document.getElementById("div1").innerHTML +=
+            "<img src=" +
+            images[i][0] +
+            ` draggable="true"
+          ondragstart="drag(event)"` +
+            " id=" +
+            images[i][1] +
+            ' class="img"/>';
+        }
+        if (div == "KITCHEN") {
+          for (x = 0; x < 6; x++) {
+            if (
+              b[x] == "9-KITCHEN-TOOLS" ||
+              b[x] == "7-KITCHEN-TOOLS" ||
+              b[x] == "WATER-JAR" ||
+              b[x] == "FRIES" ||
+              b[x] == "CUTLERY-SET" ||
+              b[x] == "BOILER"
+            ) {
+            } else {
+              window.alert("YOU HAVE LOST");
+              return;
+            }
+          }
+          window.alert("YOU HAVE WON");
+          document.getElementById("demo").innerHTML = "";
+          document.getElementById("div4").innerHTML = s[2];
+        }
+        if (div == "BATHROOM") {
+          for (x = 0; x < 6; x++) {
+            if (
+              b[x] == "BASIN" ||
+              b[x] == "SHAWER" ||
+              b[x] == "BATH-TUB" ||
+              b[x] == "TISSUE-PAPER" ||
+              b[x] == "SHAMPOO-HOLDER" ||
+              b[x] == "COMMODE"
+            ) {
+            } else {
+              window.alert("YOU HAVE LOST");
+              return;
+            }
+          }
+          window.alert("YOU HAVE WON");
+          document.getElementById("demo").innerHTML = "";
+          document.getElementById("div4").innerHTML = s[3];
+        }
+        if (div == "STUDYROOM") {
+          for (x = 0; x < 5; x++) {
+            if (
+              b[x] == "BOOK-SHELVE" ||
+              b[x] == "NOTE-BOOKS" ||
+              b[x] == "POUCH" ||
+              b[x] == "TABLE-LAMP" ||
+              b[x] == "STUDY-TABLE"
+            ) {
+            } else {
+              window.alert("YOU HAVE LOST");
+              return;
+            }
+          }
+          window.alert("YOU HAVE WON");
+          document.getElementById("demo").innerHTML = "";
+          document.getElementById("div4").innerHTML = s[4];
+        }
+        if (div == "GARDEN") {
+          for (x = 0; x < 6; x++) {
+            if (
+              b[x] == "GARDENING-TOOLS" ||
+              b[x] == "GARDEN" ||
+              b[x] == "GRASS-CUTTER" ||
+              b[x] == "POTS" ||
+              b[x] == "WATER-TANK" ||
+              b[x] == "BUSHES"
+            ) {
+            } else {
+              window.alert("YOU HAVE LOST");
+              return;
+            }
+          }
+          window.alert("YOU HAVE WON");
+          document.getElementById("demo").innerHTML = "";
+          document.getElementById("div4").innerHTML = "";
+        }
       }
     </script>
   </body>
